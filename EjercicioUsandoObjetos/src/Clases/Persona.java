@@ -6,7 +6,7 @@ public class Persona {
 	 private String nombre;
      private String apellido;
 	    
-        //Variable es lo de this y atributos lo que pasas por parametro     
+        //Variable es lo de this y atributos lo que pasas por parametro     o
 	    public Persona(String nombre, String apellido){
 	    
 	        this.nombre = nombre;
