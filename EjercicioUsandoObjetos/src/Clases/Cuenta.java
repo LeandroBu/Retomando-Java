@@ -1,24 +1,15 @@
 package Clases;
 
-public class Cuenta extends Persona{
+public class Cuenta{
 //ejercicio 4
 	private Double saldo;
-	Persona persona;
-    
-    
-	public Cuenta(String nombre, String apellido, Double saldo, Persona persona) {
-		super(nombre, apellido);
-		this.saldo = saldo;
-		this.persona = persona;
-	}
-
-
-	public Cuenta(String nombre, String apellido,Double saldo) {
-		super(nombre, apellido);
-		this.saldo = saldo;
-		this.persona = new Persona(nombre,apellido);
-	}
+	private String titular;
 	
+	public Cuenta(Double saldo, String titular) {
+		super();
+		this.saldo = saldo;
+		this.titular = titular;
+	}
 	public void depositar(Double cantidad) {
 		if(cantidad>0) {
 			this.saldo += cantidad;
