@@ -2,6 +2,7 @@ package Tests;
 
 import Clases.Persona;
 import Clases.Rectangulo;
+import Clases.Password;
 import junit.framework.Assert;
 
 import org.junit.*;
@@ -39,15 +40,24 @@ import org.junit.*;
 	    
 	    //Ejericio5
 	    
-	   @Test
-	   public void pesoIdealyMayorEdad() {
-		   Persona p1 = new Persona("Leandro", "Gomez", 40137676, 85.0, 1.71, 1997, 1, 25);
-		   
-		   Assert.assertEquals(1.0, p1.calcularIMC(), 0.0);
-		   Assert.assertTrue(p1.esMayorDeEdad());
-		   
-	   }
+//	   @Test
+//	   public void pesoIdealyMayorEdad() {
+//		   Persona p1 = new Persona("Leandro", "Gomez", 40137676, 85.0, 1.71, 1997, 1, 25);
+//		   
+//		   Assert.assertEquals(1.0, p1.calcularIMC(), 0.0);
+//		   Assert.assertTrue(p1.esMayorDeEdad());
+//		   
+//	   }
 	   
+	   @Test
+	   public void password() {
+		   Password p1 = new Password(10,"Manchini88");
+		   
+		   Assert.assertEquals("Manchini88",p1.getClave());
+		   
+		   p1.cambiarClave("Leandro123");
+		   Assert.assertEquals("Leandro123", p1.getClave());
+	   }
 	   
   
 }
