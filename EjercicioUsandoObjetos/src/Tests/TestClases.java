@@ -59,5 +59,16 @@ import org.junit.*;
 		   Assert.assertEquals("Leandro123", p1.getClave());
 	   }
 	   
+	   @Test
+	   public void testIgualDeObjetos() {
+	        //String cadena1 = new String("Cadena");
+	        //String cadena2 = new String("Cadena");
+	        //Da false porque reservamos un espacio de memoria con la palabra new, que hace que seas distintas para java
+	        // Assert.(cadena1 == cadena2);
+	        String cadena1 ="Cadena";
+	        String cadena2 ="Cadena";
+	        Assert.assertTrue(cadena1 == cadena2);
+	         }
+    
   
 }
