@@ -16,13 +16,16 @@ public class Password {
 		
 	
 	}
-	
+		
 	public void cambiarClave(String clave) {
 		if(clave.length()==this.longitud) {
-			System.out.println("si");
-			if(clave.matches("[a-z].*[A-Z]{2,}\\d{5,}"));
+			if(clave.matches(".*[A-Z]{2,}\\d{5,}[a-z]{1,}.*")) {
 			System.out.println("si");
 			this.clave = clave;
+			}
+			else {
+				System.out.println("no se puede");
+			}
 		}
 	}
 
@@ -37,7 +40,7 @@ public class Password {
 	public static void main(String[] args) {
 		Password p1 = new Password(10,"Manchini88");
 		System.out.println(p1.getClave());
-		 p1.cambiarClave("Leandro123");
+		 p1.cambiarClave("AA12345aaa");
 		 System.out.println(p1.getClave());
 	}
 

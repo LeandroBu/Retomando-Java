@@ -55,8 +55,8 @@ import org.junit.*;
 		   
 		   Assert.assertEquals("Manchini88",p1.getClave());
 		   
-		   p1.cambiarClave("Leandro123");
-		   Assert.assertEquals("Leandro123", p1.getClave());
+		   p1.cambiarClave("AA12345aaa");
+		   Assert.assertEquals("AA12345aaa", p1.getClave());
 	   }
 	   
 	   @Test
