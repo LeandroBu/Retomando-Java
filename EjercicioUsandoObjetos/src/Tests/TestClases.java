@@ -52,11 +52,10 @@ import org.junit.*;
 	   @Test
 	   public void password() {
 		   Password p1 = new Password(10,"Manchini88");
-		   
-		   Assert.assertEquals("Manchini88",p1.getClave());
-		   
-		   p1.cambiarClave("AA12345aaa");
-		   Assert.assertEquals("AA12345aaa", p1.getClave());
+		   Assert.assertEquals("Manchini88",p1.getClave());  
+		   p1.cambiarClave("aaaAA12345");
+		   Assert.assertEquals("aaaAA12345", p1.getClave());
+		   Assert.assertTrue(p1.ContraFuerte());
 	   }
 	   
 	   @Test
